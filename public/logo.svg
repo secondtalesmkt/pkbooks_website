@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" fill="none">
+  <!-- 1. Books Icon -->
+  <g transform="translate(10, 16)">
+    <!-- Top Blue Book -->
+    <path
+      d="M68 6H16C10.477 6 6 10.477 6 16C6 21.523 10.477 26 16 26H68"
+      stroke="#0056B3"
+      stroke-width="5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <line x1="18" y1="12.5" x2="62" y2="12.5" stroke="#0056B3" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="18" y1="19.5" x2="62" y2="19.5" stroke="#0056B3" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Bottom Red Book -->
+    <path
+      d="M68 32H16C10.477 32 6 36.477 6 42C6 47.523 10.477 52 16 52H68"
+      stroke="#ED1C24"
+      stroke-width="5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <line x1="18" y1="38.5" x2="62" y2="38.5" stroke="#ED1C24" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="18" y1="45.5" x2="62" y2="45.5" stroke="#ED1C24" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- 2. PK (Blue) -->
+  <text x="96" y="60" fill="#0056B3" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="52" letter-spacing="-1">PK</text>
+
+  <!-- 3. Books (Red) -->
+  <text x="174" y="60" fill="#ED1C24" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="52" letter-spacing="-0.5">Books</text>
+
+  <!-- 4. Stacked Tagline -->
+  <g transform="translate(328, 32)">
+    <text x="0" y="0" fill="#111827" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="11" letter-spacing="1">BOOKS</text>
+    <text x="0" y="14" fill="#111827" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="11" letter-spacing="1">STATIONERY</text>
+    <text x="0" y="28" fill="#111827" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="11" letter-spacing="1">PRINTING</text>
+  </g>
+</svg>
