@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://pkbooks.example/sitemap.xml"
+    sitemap: "https://pkbooks.in/sitemap.xml"
   };
 }
+
