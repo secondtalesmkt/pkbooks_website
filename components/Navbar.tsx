@@ -270,11 +270,11 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search books, stationery, printing..."
-              className="w-full rounded-full border border-slate-200 bg-slate-50 pl-4 pr-10 py-2 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0057B8]"
+              className="w-full rounded-full border border-slate-200 bg-slate-50 pl-4 pr-10 py-2 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0056B3]"
             />
             <button
               type="submit"
-              className="absolute right-1.5 top-1/2 -translate-y-1/2 grid h-7 w-7 place-items-center rounded-full bg-[#0057B8] text-white"
+              className="absolute right-1.5 top-1/2 -translate-y-1/2 grid h-7 w-7 place-items-center rounded-full bg-[#0056B3] text-white"
               aria-label="Search"
             >
               <Search className="h-3 w-3" />
@@ -295,7 +295,7 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700">
-                      <Icon className="h-4 w-4 text-[#0057B8]" />
+                      <Icon className="h-4 w-4 text-[#0056B3]" />
                     </div>
                     <span>{link.name}</span>
                   </div>
@@ -315,7 +315,7 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
                 href="https://wa.me/919746700123"
                 target="_blank"
                 rel="noreferrer"
-                className="w-full flex items-center justify-center gap-2 p-3 rounded-2xl bg-emerald-500 text-white text-xs font-bold shadow-md"
+                className="w-full flex items-center justify-center gap-2 p-3 rounded-2xl bg-[#0056B3] hover:bg-blue-800 text-white text-xs font-bold shadow-md"
               >
                 <MessageSquare className="h-4 w-4" />
                 <span>WhatsApp Order (9746 700 123)</span>

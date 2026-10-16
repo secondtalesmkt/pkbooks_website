@@ -3,71 +3,75 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen, Boxes, Printer, Sparkles } from "lucide-react";
 
-const bentoSections = [
+const departmentCards = [
   {
     id: "books",
     title: "Academic & Literature Bookstore",
-    subtitle: "Over 10,000+ Curated Titles in Stock",
+    shortTitle: "Bookstore",
+    subtitle: "Over 10,000+ Titles",
     description: "Kerala PSC 2026-27 rank files, SCERT & CBSE textbooks from Class 1 to 12, Malayalam literature classics, and bestselling novels.",
     href: "/books",
     badge: "10,000+ TITLES",
-    badgeBg: "bg-[#0056B3] text-white",
+    dotColor: "bg-[#0056B3]",
+    textColor: "text-[#0056B3]",
     image: "/images/books_literature.jpg?v=2",
-    colSpan: "lg:col-span-7",
     icon: BookOpen
   },
   {
     id: "print",
     title: "15-Min Express Digital Print Lab",
-    subtitle: "Counter Pickup at Valanchery Bus Stand",
-    description: "High-speed laser printing, KTU/Calicut University thesis hardcover with golden foil, spiral binding, and duplex color photocopy.",
+    shortTitle: "Print Counter",
+    subtitle: "Valanchery Bus Stand Pickup",
+    description: "High-speed laser printing, KTU/Calicut University thesis hardcover with gold foil, spiral binding, and duplex color photocopy.",
     href: "/printing",
     badge: "15-MIN EXPRESS",
-    badgeBg: "bg-[#ED1C24] text-white",
+    dotColor: "bg-[#ED1C24]",
+    textColor: "text-[#ED1C24]",
     image: "/images/printing_counter.jpg?v=2",
-    colSpan: "lg:col-span-5",
     icon: Printer
   },
   {
     id: "stationery",
     title: "School & Office Stationery World",
-    subtitle: "Authorized Dealer for Top Brands",
-    description: "Classmate notebooks, Hauser XO, Pentel, Camlin geometry boxes, Faber-Castell artist pastels, and complete school companion kits.",
+    shortTitle: "Stationery",
+    subtitle: "Authorized Brands",
+    description: "Classmate notebooks, Hauser XO, Pentel, Camlin geometry boxes, Faber-Castell artist pastels, and student packages.",
     href: "/stationery",
     badge: "GENUINE STOCK",
-    badgeBg: "bg-[#0056B3] text-white",
+    dotColor: "bg-[#0056B3]",
+    textColor: "text-[#0056B3]",
     image: "/images/stationery_world.jpg?v=2",
-    colSpan: "lg:col-span-5",
     icon: Boxes
   },
   {
     id: "custom",
     title: "Personalized Gifts & Custom Studio",
-    subtitle: "Personalized Merchandise for Students & Schools",
-    description: "Custom printed spiral notebooks with student photo/name, glossy ceramic sublimation mugs, school house badges, and executive cards.",
+    shortTitle: "Custom Gifts",
+    subtitle: "Student & School Merch",
+    description: "Custom printed spiral notebooks with student photo/name, glossy ceramic sublimation mugs, school badges, and ID cards.",
     href: "/custom-products",
     badge: "STUDIO CREATOR",
-    badgeBg: "bg-[#ED1C24] text-white",
+    dotColor: "bg-[#ED1C24]",
+    textColor: "text-[#ED1C24]",
     image: "/images/custom_products.jpg?v=2",
-    colSpan: "lg:col-span-7",
     icon: Sparkles
   }
 ];
 
 export default function PromoBannerCards() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-slate-50/60 border-b border-slate-200/70">
+    <section className="py-12 sm:py-16 bg-slate-50/70 border-b border-slate-200/80">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10 text-left">
           <div>
             <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0056B3] mb-1.5">
               <span className="w-2 h-2 rounded-full bg-[#ED1C24]" />
-              <span>4 Core Departments · Valanchery</span>
+              <span>4 Dedicated Departments · Valanchery</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
-              Explore Everything at PK Books
+              Explore Our Core Departments
             </h2>
           </div>
           <Link
@@ -79,49 +83,54 @@ export default function PromoBannerCards() {
           </Link>
         </div>
 
-        {/* High-End Bento Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
-          {bentoSections.map((item) => {
+        {/* 4 Bright, Premium Department Cards (Zero Dark Monoliths) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {departmentCards.map((item) => {
             const Icon = item.icon;
             return (
               <Link
                 key={item.id}
                 href={item.href}
-                className={`group relative rounded-[2rem] overflow-hidden bg-slate-900 border border-slate-200 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between min-h-[340px] sm:min-h-[380px] p-6 sm:p-8 ${item.colSpan}`}
+                className="group flex flex-col rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#0056B3] transition-all duration-300 overflow-hidden hover:-translate-y-1.5 text-left"
               >
-                {/* Background Image with Cinematic Darkness Gradient */}
-                <div className="absolute inset-0 -z-10 overflow-hidden">
+                {/* 100% Full-Color Vivid Photography Container */}
+                <div className="relative h-52 w-full overflow-hidden bg-slate-100">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out opacity-45 group-hover:opacity-55"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/20" />
-                </div>
-
-                {/* Top Badge & Icon */}
-                <div className="flex items-center justify-between gap-3 z-10">
-                  <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest shadow-sm ${item.badgeBg}`}>
-                    <Icon className="h-3 w-3" />
+                  {/* Floating Pill Badge */}
+                  <div className="absolute top-3.5 left-3.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-white/95 backdrop-blur-md text-slate-900 shadow-md border border-slate-100">
+                    <span className={`w-2 h-2 rounded-full ${item.dotColor}`} />
                     <span>{item.badge}</span>
-                  </span>
-                  <div className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-white group-hover:text-slate-900 transition-all duration-300">
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </div>
                 </div>
 
-                {/* Content at Bottom */}
-                <div className="z-10 space-y-2 pt-12">
-                  <span className="text-xs font-bold text-slate-300 tracking-wide uppercase">
-                    {item.subtitle}
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-black text-white leading-snug group-hover:text-blue-200 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal max-w-lg line-clamp-2 sm:line-clamp-none">
-                    {item.description}
-                  </p>
+                {/* Card Content */}
+                <div className="p-5 flex flex-col justify-between flex-1">
+                  <div>
+                    <span className={`text-[11px] font-extrabold uppercase tracking-wider block ${item.textColor}`}>
+                      {item.subtitle}
+                    </span>
+                    <h3 className="text-base sm:text-lg font-black text-slate-900 group-hover:text-[#0056B3] transition-colors leading-snug mt-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-slate-500 leading-relaxed font-normal mt-2 line-clamp-2">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  {/* Clean Bottom Action Row */}
+                  <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span className="text-xs font-bold text-[#0056B3] group-hover:text-[#ED1C24] transition-colors">
+                      Explore {item.shortTitle}
+                    </span>
+                    <div className="w-7 h-7 rounded-full bg-slate-100 group-hover:bg-[#0056B3] text-slate-700 group-hover:text-white flex items-center justify-center transition-colors">
+                      <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                  </div>
                 </div>
               </Link>
             );

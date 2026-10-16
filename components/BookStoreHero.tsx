@@ -235,130 +235,81 @@ export default function BookStoreHero() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-slate-50/40 to-white pt-6 pb-12 sm:pt-10 sm:pb-16 lg:pt-12 lg:pb-20 border-b border-slate-200/60">
-      {/* Ambient background blur elements */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#0056B3]/5 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-1/3 right-10 w-80 h-80 bg-[#ED1C24]/5 rounded-full blur-3xl pointer-events-none -z-10" />
-
+    <section className="py-4 sm:py-6 lg:py-8 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
-          
-          {/* ======================================================== */}
-          {/* LEFT COLUMN: Hero Brand Narrative & 4 Core Pillars      */}
-          {/* ======================================================== */}
-          <div className="lg:col-span-6 space-y-6 text-left">
-            {/* Eyebrow Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 border border-slate-200/90 px-3.5 py-1 text-xs font-bold text-slate-800 shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-[#ED1C24]" />
-              <span>Valanchery Bus Stand · Flagship Bookstore &amp; Print Lab</span>
-            </div>
-
-            {/* Main Headline - Clean, Authoritative, Logo Colors Only */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-black text-slate-900 tracking-tight leading-[1.12]">
-              Books, Stationery &amp;<br className="hidden sm:inline" />
-              <span className="text-[#0056B3]">Digital Print Lab</span> in{" "}
-              <span className="text-[#ED1C24]">Valanchery</span>.
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal max-w-xl">
-              Your comprehensive destination for <strong>10,000+ academic &amp; literature titles</strong>, Kerala PSC guides, and genuine school stationery—featuring our dedicated <strong>15-minute express counter pickup</strong> at Valanchery Bus Stand.
-            </p>
-
-            {/* 4 Core Pillars: Strict 2-Color Logo Harmony (Blue & Red) */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-              <Link
-                href="/books"
-                className="group flex flex-col p-3 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#0056B3] transition-all text-left"
-              >
-                <div className="w-8 h-8 rounded-xl bg-blue-50 text-[#0056B3] grid place-items-center mb-2 group-hover:scale-105 transition-transform">
-                  <BookOpen className="h-4 w-4" />
-                </div>
-                <span className="text-xs font-bold text-slate-900 group-hover:text-[#0056B3]">10,000+ Titles</span>
-                <span className="text-[10px] text-slate-400">PSC, SCERT, Novels</span>
-              </Link>
-
-              <Link
-                href="/stationery"
-                className="group flex flex-col p-3 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#0056B3] transition-all text-left"
-              >
-                <div className="w-8 h-8 rounded-xl bg-blue-50 text-[#0056B3] grid place-items-center mb-2 group-hover:scale-105 transition-transform">
-                  <Boxes className="h-4 w-4" />
-                </div>
-                <span className="text-xs font-bold text-slate-900 group-hover:text-[#0056B3]">Stationery</span>
-                <span className="text-[10px] text-slate-400">Classmate &amp; Art</span>
-              </Link>
-
-              <div
-                onClick={() => setActiveTab("print")}
-                className="group flex flex-col p-3 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#ED1C24] transition-all cursor-pointer text-left"
-              >
-                <div className="w-8 h-8 rounded-xl bg-red-50 text-[#ED1C24] grid place-items-center mb-2 group-hover:scale-105 transition-transform">
-                  <Printer className="h-4 w-4" />
-                </div>
-                <span className="text-xs font-bold text-slate-900 group-hover:text-[#ED1C24]">15-Min Print</span>
-                <span className="text-[10px] text-slate-400">Thesis &amp; Xerox</span>
+        {/* Flagship Deep Navy Hero Enclosure */}
+        <div className="relative rounded-[28px] sm:rounded-[36px] overflow-hidden bg-gradient-to-br from-[#061738] via-[#091f4a] to-[#040e24] border border-blue-900/50 shadow-2xl p-6 sm:p-8 lg:p-11 text-white">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+            
+            {/* ======================================================== */}
+            {/* LEFT COLUMN: Hero Brand Narrative & Checkmarks           */}
+            {/* ======================================================== */}
+            <div className="lg:col-span-6 space-y-5 text-left">
+              {/* Eyebrow Badge */}
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-3.5 py-1 text-xs font-bold text-white shadow-2xs">
+                <span className="w-2 h-2 rounded-full bg-[#ED1C24] animate-pulse" />
+                <span>Valanchery Bus Stand · 15-Min Express</span>
               </div>
 
-              <Link
-                href="/custom-products"
-                className="group flex flex-col p-3 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-[#ED1C24] transition-all text-left"
-              >
-                <div className="w-8 h-8 rounded-xl bg-red-50 text-[#ED1C24] grid place-items-center mb-2 group-hover:scale-105 transition-transform">
-                  <Sparkles className="h-4 w-4" />
+              {/* Main Headline */}
+              <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-white tracking-tight leading-[1.12]">
+                Online Printing &amp;<br />
+                Thesis Binding
+              </h1>
+
+              {/* Subtitle */}
+              <p className="text-xs sm:text-sm text-blue-100/90 leading-relaxed font-normal max-w-xl">
+                Upload your document, select options, and pick up in 15 minutes at our Valanchery counter or get home delivery.
+              </p>
+
+              {/* 3 Core Value Checkmarks */}
+              <div className="space-y-2.5 pt-2 text-xs sm:text-sm text-blue-100 font-medium">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-5 h-5 rounded-full bg-blue-500/20 text-blue-300 flex items-center justify-center shrink-0">
+                    <Check className="h-3 w-3 stroke-[3]" />
+                  </div>
+                  <span>15-Minute Express Counter Pickup</span>
                 </div>
-                <span className="text-xs font-bold text-slate-900 group-hover:text-[#ED1C24]">Custom Gifts</span>
-                <span className="text-[10px] text-slate-400">Photo Mugs &amp; ID</span>
-              </Link>
+                <div className="flex items-center gap-2.5">
+                  <div className="w-5 h-5 rounded-full bg-blue-500/20 text-blue-300 flex items-center justify-center shrink-0">
+                    <Check className="h-3 w-3 stroke-[3]" />
+                  </div>
+                  <span>Crisp Laser Printing &amp; Thesis Hardcover</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <div className="w-5 h-5 rounded-full bg-blue-500/20 text-blue-300 flex items-center justify-center shrink-0">
+                    <Check className="h-3 w-3 stroke-[3]" />
+                  </div>
+                  <span>Instant WhatsApp Order Confirmation</span>
+                </div>
+              </div>
+
+              {/* Action CTA Row */}
+              <div className="flex flex-wrap items-center gap-3 pt-3">
+                <Link
+                  href="/books"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#ED1C24] hover:bg-[#d0141b] text-white font-bold text-xs sm:text-sm px-5 py-3 shadow-lg shadow-red-500/25 active:scale-98 transition-all"
+                >
+                  <span>Browse Book Store</span>
+                  <ArrowUpRight className="h-4 w-4" />
+                </Link>
+
+                <a
+                  href="tel:+919746700123"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-200 hover:text-white px-3 py-2 transition-colors"
+                >
+                  <Phone className="h-3.5 w-3.5 text-blue-400" />
+                  <span>9746 700 123</span>
+                </a>
+              </div>
             </div>
 
-            {/* Action CTA Row - Unified Brand Palette */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Link
-                href="/books"
-                className="inline-flex items-center gap-2 rounded-full bg-[#ED1C24] hover:bg-[#d0141b] text-white font-bold text-xs sm:text-sm px-6 py-3.5 shadow-md shadow-red-500/20 hover:shadow-lg transition-all active:scale-98"
-              >
-                <span>Browse All Books</span>
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-
-              <a
-                href="https://wa.me/919746700123?text=Hi%20PK%20Books%2C%20I%20need%20assistance%20with%20an%20order"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0056B3] hover:bg-blue-800 text-white font-bold text-xs sm:text-sm px-5 py-3.5 shadow-md shadow-blue-500/20 hover:shadow-lg transition-all active:scale-98"
-              >
-                <MessageSquare className="h-4 w-4" />
-                <span>WhatsApp Order</span>
-              </a>
-
-              <a
-                href="tel:+919746700123"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-slate-950 px-3 py-2 transition-colors"
-              >
-                <Phone className="h-3.5 w-3.5 text-[#0056B3]" />
-                <span>9746 700 123</span>
-              </a>
-            </div>
-
-            {/* Trust Proof Row - Disciplined Monochrome & Brand Accent */}
-            <div className="flex items-center gap-3 pt-2 text-xs text-slate-500 border-t border-slate-200/70">
-              <span className="font-bold text-slate-900">★ 4.9 / 5 Rating</span>
-              <span className="text-slate-300">·</span>
-              <span>500+ Valanchery Readers</span>
-              <span className="text-slate-300 hidden sm:inline">·</span>
-              <span className="hidden sm:inline font-semibold text-[#0056B3] bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200">
-                Open Daily 8:30 AM – 9:00 PM
-              </span>
-            </div>
-          </div>
-
-          {/* ======================================================== */}
-          {/* RIGHT COLUMN: Streamlined Precision Interactive Console  */}
-          {/* ======================================================== */}
-          <div className="lg:col-span-6 w-full">
-            {/* Clean Architectural Console Container */}
-            <div className="rounded-3xl bg-white p-5 sm:p-7 shadow-xl border border-slate-200/90 text-left">
+            {/* ======================================================== */}
+            {/* RIGHT COLUMN: White Interactive Printing Console         */}
+            {/* ======================================================== */}
+            <div className="lg:col-span-6 w-full">
+              {/* Clean White Precision Console */}
+              <div className="rounded-3xl bg-white p-5 sm:p-6 shadow-2xl border border-white/20 text-left text-slate-900">
               
               {/* Switcher Tabs - Pure Logo Colors */}
               <div className="flex rounded-2xl bg-slate-100 p-1 mb-5 text-xs font-bold gap-1 border border-slate-200/60">
@@ -731,7 +682,7 @@ export default function BookStoreHero() {
                         value={inquiryBookName}
                         onChange={(e) => setInquiryBookName(e.target.value)}
                         placeholder="e.g. Kerala PSC LDC Rank File 2026 / Wings of Fire"
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-xs text-slate-800 focus:bg-white focus:outline-none focus:border-[#0057B8]"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-xs text-slate-800 focus:bg-white focus:outline-none focus:border-[#0056B3]"
                       />
                     </div>
 
@@ -742,12 +693,12 @@ export default function BookStoreHero() {
                         value={inquiryCustomerName}
                         onChange={(e) => setInquiryCustomerName(e.target.value)}
                         placeholder="e.g. Rahul Nair"
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-xs text-slate-800 focus:bg-white focus:outline-none focus:border-[#0057B8]"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-xs text-slate-800 focus:bg-white focus:outline-none focus:border-[#0056B3]"
                       />
                     </div>
 
                     <div className="p-3 rounded-xl bg-blue-50/70 border border-blue-200/60 text-xs text-slate-700 space-y-1">
-                      <div className="flex items-center gap-2 font-bold text-[#0057B8]">
+                      <div className="flex items-center gap-2 font-bold text-[#0056B3]">
                         <CheckCircle2 className="h-4 w-4" />
                         <span>Instant 2-Minute WhatsApp Verification</span>
                       </div>
@@ -769,6 +720,7 @@ export default function BookStoreHero() {
               </div>
             </div>
 
+          </div>
         </div>
       </div>
 
@@ -778,7 +730,7 @@ export default function BookStoreHero() {
           <div className="w-full max-w-md rounded-3xl bg-white p-6 shadow-2xl border border-slate-100 space-y-5 animate-in zoom-in-95 duration-200">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#0057B8] bg-blue-50 px-2 py-0.5 rounded-md">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#0056B3] bg-blue-50 px-2 py-0.5 rounded-md">
                   Secure Checkout
                 </span>
                 <h3 className="text-lg font-black text-slate-900 mt-1">Complete Order Payment</h3>
@@ -802,7 +754,7 @@ export default function BookStoreHero() {
               </div>
               <div className="flex justify-between text-base font-black text-slate-900 pt-2 border-t border-slate-200">
                 <span>Total to Pay:</span>
-                <span className="text-[#0057B8]">{money.format(quote.total)}</span>
+                <span className="text-[#0056B3]">{money.format(quote.total)}</span>
               </div>
             </div>
 
@@ -810,11 +762,11 @@ export default function BookStoreHero() {
               <label
                 onClick={() => setSelectedOnlineMethod("upi")}
                 className={`flex items-center justify-between p-3 rounded-2xl border cursor-pointer transition-all ${
-                  selectedOnlineMethod === "upi" ? "border-[#0057B8] bg-blue-50/50" : "border-slate-200 hover:bg-slate-50"
+                  selectedOnlineMethod === "upi" ? "border-[#0056B3] bg-blue-50/50" : "border-slate-200 hover:bg-slate-50"
                 }`}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-blue-100 text-[#0057B8] grid place-items-center">
+                  <div className="w-9 h-9 rounded-xl bg-blue-100 text-[#0056B3] grid place-items-center">
                     <QrCode className="h-5 w-5" />
                   </div>
                   <div>
@@ -822,13 +774,13 @@ export default function BookStoreHero() {
                     <p className="text-[10px] text-slate-500">Scan &amp; pay with 0% extra fee</p>
                   </div>
                 </div>
-                <input type="radio" checked={selectedOnlineMethod === "upi"} readOnly className="accent-[#0057B8]" />
+                <input type="radio" checked={selectedOnlineMethod === "upi"} readOnly className="accent-[#0056B3]" />
               </label>
 
               <label
                 onClick={() => setSelectedOnlineMethod("card")}
                 className={`flex items-center justify-between p-3 rounded-2xl border cursor-pointer transition-all ${
-                  selectedOnlineMethod === "card" ? "border-[#0057B8] bg-blue-50/50" : "border-slate-200 hover:bg-slate-50"
+                  selectedOnlineMethod === "card" ? "border-[#0056B3] bg-blue-50/50" : "border-slate-200 hover:bg-slate-50"
                 }`}
               >
                 <div className="flex items-center gap-3">
@@ -840,14 +792,14 @@ export default function BookStoreHero() {
                     <p className="text-[10px] text-slate-500">Visa, Mastercard, RuPay</p>
                   </div>
                 </div>
-                <input type="radio" checked={selectedOnlineMethod === "card"} readOnly className="accent-[#0057B8]" />
+                <input type="radio" checked={selectedOnlineMethod === "card"} readOnly className="accent-[#0056B3]" />
               </label>
             </div>
 
             <button
               onClick={processDigitalPayment}
               disabled={isProcessingPayment}
-              className="w-full flex items-center justify-center gap-2 rounded-2xl bg-[#0057B8] hover:bg-blue-700 text-white font-bold text-sm py-3.5 shadow-lg transition-all active:scale-98 disabled:opacity-60"
+              className="w-full flex items-center justify-center gap-2 rounded-2xl bg-[#0056B3] hover:bg-blue-800 text-white font-bold text-sm py-3.5 shadow-lg transition-all active:scale-98 disabled:opacity-60"
             >
               {isProcessingPayment ? (
                 <>
