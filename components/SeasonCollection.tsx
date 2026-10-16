@@ -57,30 +57,30 @@ const categoryData = [
 
 export default function SeasonCollection() {
   return (
-    <section className="py-8 sm:py-12 bg-gradient-to-b from-white via-slate-50/40 to-white border-t border-slate-100">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white border-b border-slate-200/70">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex items-end justify-between mb-7 sm:mb-9">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-8 sm:mb-12">
           <div>
-            <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[#0057B8] mb-1">
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0057B8] mb-1.5">
               <Sparkles className="h-3.5 w-3.5" />
               <span>Curated Collections</span>
             </div>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
               Explore by Genre &amp; Category
             </h2>
           </div>
           <Link
             href="/books"
-            className="group hidden sm:flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-[#0057B8] transition-colors"
+            className="group hidden sm:inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-700 hover:text-[#0057B8] transition-colors"
           >
             <span>View All Titles</span>
-            <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
         {/* 6 Circular Category Showcase */}
-        <div className="flex sm:grid sm:grid-cols-3 lg:grid-cols-6 gap-5 sm:gap-6 overflow-x-auto no-scrollbar pb-3 sm:pb-0 px-1 -mx-4 sm:-mx-6 lg:mx-0 px-4 sm:px-6 lg:px-0 justify-start sm:justify-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 justify-center">
           {categoryData.map((cat) => {
             const count =
               cat.filter === "__custom__"
@@ -91,29 +91,29 @@ export default function SeasonCollection() {
               <Link
                 key={cat.name}
                 href={cat.href}
-                className="group flex flex-col items-center gap-2.5 min-w-[110px] sm:min-w-0 transition-transform duration-300 hover:-translate-y-1"
+                className="group flex flex-col items-center gap-3.5 transition-transform duration-300 hover:-translate-y-1.5 text-center"
               >
-                {/* Visual Circular Avatar with 3D Illustration */}
+                {/* Visual Circular Avatar with Double-Bezel Hardware Frame */}
                 <div
-                  className={`w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white p-1.5 shadow-md border-2 border-slate-200/80 transition-all duration-300 group-hover:shadow-xl group-hover:ring-4 ${cat.ringColor} overflow-hidden`}
+                  className={`w-28 h-28 sm:w-32 sm:h-32 rounded-full p-2 bg-gradient-to-br from-slate-100 via-white to-slate-200 shadow-md transition-all duration-500 group-hover:shadow-2xl group-hover:ring-4 ${cat.ringColor} overflow-hidden border border-slate-200/80`}
                 >
-                  <div className="w-full h-full rounded-full overflow-hidden bg-slate-50 relative">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-slate-100 relative shadow-inner">
                     <img
                       src={cat.image}
                       alt={cat.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+                      className="w-full h-full object-cover group-hover:scale-115 transition-transform duration-700 ease-out"
                       loading="lazy"
                     />
                   </div>
                 </div>
 
                 {/* Text Labels */}
-                <div className="text-center px-1">
-                  <h3 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#0057B8] transition-colors leading-snug">
+                <div className="px-1 space-y-0.5">
+                  <h3 className="text-xs sm:text-sm font-extrabold text-slate-900 group-hover:text-[#0057B8] transition-colors leading-snug">
                     {cat.name}
                   </h3>
-                  <p className="text-[11px] text-slate-400 font-medium mt-0.5">
-                    {count > 0 ? `${count} items` : cat.subtitle}
+                  <p className="text-[11px] text-slate-400 font-medium">
+                    {count > 0 ? `${count} titles available` : cat.subtitle}
                   </p>
                 </div>
               </Link>
@@ -122,10 +122,10 @@ export default function SeasonCollection() {
         </div>
 
         {/* Mobile View All Link */}
-        <div className="mt-5 text-center sm:hidden">
+        <div className="mt-8 text-center sm:hidden">
           <Link
             href="/books"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0057B8]"
+            className="inline-flex items-center gap-2 text-xs font-bold text-[#0057B8] bg-blue-50 px-4 py-2.5 rounded-full"
           >
             <span>View All Categories &amp; Books</span>
             <ArrowRight className="h-3.5 w-3.5" />
