@@ -66,7 +66,7 @@ export default function BestsellersFeature() {
             {/* Right Cinematic Image Showcase */}
             <div className="lg:col-span-6 relative h-[260px] sm:h-[340px] lg:h-[420px] overflow-hidden">
               <img
-                src="/images/bestseller-library-banner.jpg"
+                src="/images/bestseller-library-banner.jpg?v=2"
                 alt="Kerala Bestselling Books Collection"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"

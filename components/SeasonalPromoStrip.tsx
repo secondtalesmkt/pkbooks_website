@@ -92,7 +92,7 @@ export default function SeasonalPromoStrip() {
                 {/* Main Product Photography Card */}
                 <div className="relative overflow-hidden rounded-2xl bg-white shadow-2xl border-2 border-white/30 aspect-[4/3]">
                   <Image
-                    src="/images/academic-combo-bundle.jpg"
+                    src="/images/academic-combo-bundle.jpg?v=2"
                     alt="Academic Year 2026-27 School Combo Package"
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-500"

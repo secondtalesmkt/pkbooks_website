@@ -10,7 +10,7 @@ const categoryData = [
     subtitle: "True Stories",
     filter: "Biographies & Memoirs",
     href: "/books?cat=biography",
-    image: "/images/collection-biography.jpg",
+    image: "/images/collection-biography.jpg?v=2",
     ringColor: "group-hover:border-amber-500 group-hover:ring-amber-100"
   },
   {
@@ -18,7 +18,7 @@ const categoryData = [
     subtitle: "Fairy Tales & Art",
     filter: "Children's Books",
     href: "/books?cat=children",
-    image: "/images/collection-children.jpg",
+    image: "/images/collection-children.jpg?v=2",
     ringColor: "group-hover:border-emerald-500 group-hover:ring-emerald-100"
   },
   {
@@ -26,7 +26,7 @@ const categoryData = [
     subtitle: "Novels & Poetry",
     filter: "Literature & Fiction",
     href: "/books?cat=fiction",
-    image: "/images/collection-fiction.jpg",
+    image: "/images/collection-fiction.jpg?v=2",
     ringColor: "group-hover:border-rose-500 group-hover:ring-rose-100"
   },
   {
@@ -34,7 +34,7 @@ const categoryData = [
     subtitle: "Rank Files & Guides",
     filter: "Competitive & Academic",
     href: "/books?cat=academic",
-    image: "/images/collection-academic.jpg",
+    image: "/images/collection-academic.jpg?v=2",
     ringColor: "group-hover:border-blue-600 group-hover:ring-blue-100"
   },
   {
@@ -42,7 +42,7 @@ const categoryData = [
     subtitle: "Pens, Notes & Sets",
     filter: "Stationery Products",
     href: "/stationery",
-    image: "/images/category-stationery.jpg",
+    image: "/images/category-stationery.jpg?v=2",
     ringColor: "group-hover:border-purple-500 group-hover:ring-purple-100"
   },
   {
@@ -50,7 +50,7 @@ const categoryData = [
     subtitle: "Photo Mugs & Gifts",
     filter: "__custom__",
     href: "/custom-products",
-    image: "/images/category-custom.jpg",
+    image: "/images/category-custom.jpg?v=2",
     ringColor: "group-hover:border-[#ED1C24] group-hover:ring-red-100"
   }
 ];
