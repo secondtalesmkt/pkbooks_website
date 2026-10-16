@@ -1,0 +1,15 @@
+{
+  "name": "PK Books - Books, Stationery & Printing",
+  "short_name": "PK Books",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0057B8",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# PK Books Apache Configuration for Hostinger
+Options -Indexes
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve existing files and directories directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Clean URLs: map /books to /books.html, /stationery to /stationery.html, etc.
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.*)/?$ $1.html [L]
+
+  # Fallback to index.html for client-side routing
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^ index.html [L]
+</IfModule>

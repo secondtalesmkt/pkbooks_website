@@ -1,11 +1,12 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { products as defaultBooks } from "@/lib/catalog";
 import { STATIONERY_PRODUCTS } from "@/lib/stationeryCatalog";
 import { DEFAULT_PRINT_PRODUCTS } from "@/lib/printCatalog";
 
-export async function GET(request: NextRequest) {
-  const { searchParams } = new URL(request.url);
-  const requestedShop = searchParams.get("shop");
+export const dynamic = "force-static";
+
+export async function GET() {
+
 
   // 1. Format Books
   const booksFormatted = defaultBooks.map((b, idx) => {
@@ -75,15 +76,7 @@ export async function GET(request: NextRequest) {
 
   const all = [...booksFormatted, ...stationeryFormatted, ...printFormatted];
 
-  if (requestedShop === "books") {
-    return NextResponse.json({ shop: "books", count: booksFormatted.length, products: booksFormatted });
-  }
-  if (requestedShop === "stationery") {
-    return NextResponse.json({ shop: "stationery", count: stationeryFormatted.length, products: stationeryFormatted });
-  }
-  if (requestedShop === "printing") {
-    return NextResponse.json({ shop: "printing", count: printFormatted.length, products: printFormatted });
-  }
+
 
   return NextResponse.json({
     counts: {
