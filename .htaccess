@@ -11,11 +11,19 @@ DirectoryIndex index.html index.php
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
+  # Check if requested asset exists inside public/
+  RewriteCond %{DOCUMENT_ROOT}/public/$1 -f
+  RewriteRule ^(.*)$ public/$1 [L]
+
   # Clean URLs: map /books to /books.html, /stationery to /stationery.html, etc.
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.*)/?$ $1.html [L]
 
-  # Fallback to index.html for client-side routing
+  # Never rewrite static assets (images, fonts, scripts) to index.html (return 404 instead of index.html)
+  RewriteCond %{REQUEST_URI} \.(css|js|jpe?g|png|gif|svg|webp|ico|woff2?|ttf|eot|webmanifest|json)$ [NC]
+  RewriteRule ^ - [R=404,L]
+
+  # Fallback to index.html for client-side HTML routes only
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^ index.html [L]
 </IfModule>
