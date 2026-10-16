@@ -11,7 +11,7 @@ const bentoSections = [
     description: "Kerala PSC 2026-27 rank files, SCERT & CBSE textbooks from Class 1 to 12, Malayalam literature classics, and bestselling novels.",
     href: "/books",
     badge: "10,000+ TITLES",
-    badgeBg: "bg-blue-600 text-white",
+    badgeBg: "bg-[#0056B3] text-white",
     image: "/images/books_literature.jpg?v=2",
     colSpan: "lg:col-span-7",
     icon: BookOpen
@@ -35,7 +35,7 @@ const bentoSections = [
     description: "Classmate notebooks, Hauser XO, Pentel, Camlin geometry boxes, Faber-Castell artist pastels, and complete school companion kits.",
     href: "/stationery",
     badge: "GENUINE STOCK",
-    badgeBg: "bg-emerald-600 text-white",
+    badgeBg: "bg-[#0056B3] text-white",
     image: "/images/stationery_world.jpg?v=2",
     colSpan: "lg:col-span-5",
     icon: Boxes
@@ -47,7 +47,7 @@ const bentoSections = [
     description: "Custom printed spiral notebooks with student photo/name, glossy ceramic sublimation mugs, school house badges, and executive cards.",
     href: "/custom-products",
     badge: "STUDIO CREATOR",
-    badgeBg: "bg-amber-600 text-white",
+    badgeBg: "bg-[#ED1C24] text-white",
     image: "/images/custom_products.jpg?v=2",
     colSpan: "lg:col-span-7",
     icon: Sparkles
@@ -62,8 +62,8 @@ export default function PromoBannerCards() {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-12">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0057B8] mb-1.5">
-              <Sparkles className="h-3.5 w-3.5" />
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0056B3] mb-1.5">
+              <span className="w-2 h-2 rounded-full bg-[#ED1C24]" />
               <span>4 Core Departments · Valanchery</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
@@ -72,7 +72,7 @@ export default function PromoBannerCards() {
           </div>
           <Link
             href="/books"
-            className="group inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#0057B8] hover:text-blue-800 transition-colors"
+            className="group inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#0056B3] hover:text-blue-800 transition-colors"
           >
             <span>View Full Catalog</span>
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -113,7 +113,7 @@ export default function PromoBannerCards() {
 
                 {/* Content at Bottom */}
                 <div className="z-10 space-y-2 pt-12">
-                  <span className="text-xs font-bold text-amber-300 tracking-wide uppercase">
+                  <span className="text-xs font-bold text-slate-300 tracking-wide uppercase">
                     {item.subtitle}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-black text-white leading-snug group-hover:text-blue-200 transition-colors">

@@ -75,12 +75,12 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
           {/* Left Store Info */}
           <div className="flex items-center gap-3 sm:gap-4 flex-wrap text-slate-300">
             <span className="inline-flex items-center gap-1.5 font-medium text-slate-200">
-              <MapPin className="h-3 w-3 text-red-400 shrink-0" />
+              <MapPin className="h-3 w-3 text-[#ED1C24] shrink-0" />
               <span>Bus Stand, Valanchery - 676552</span>
             </span>
             <span className="hidden sm:inline-block text-white/20">|</span>
             <span className="hidden sm:inline-flex items-center gap-1.5 text-slate-300">
-              <Clock className="h-3 w-3 text-amber-400" />
+              <Clock className="h-3 w-3 text-slate-400" />
               Open Daily: 8:30 AM – 9:00 PM
             </span>
             <span className="hidden md:inline-block text-white/20">|</span>
@@ -95,9 +95,9 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
               href="https://wa.me/919746700123"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-semibold transition-colors"
+              className="inline-flex items-center gap-1.5 text-white hover:text-slate-200 font-semibold transition-colors"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ED1C24]" />
               <span>WhatsApp: 9746 700 123</span>
             </a>
             <span className="text-white/20 hidden xs:inline">|</span>
@@ -105,7 +105,7 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
               href="tel:+919995037373"
               className="hidden xs:inline-flex items-center gap-1 text-slate-300 hover:text-white transition-colors"
             >
-              <Phone className="h-3 w-3 text-blue-300" />
+              <Phone className="h-3 w-3 text-[#0056B3]" />
               <span>9995 037 373</span>
             </a>
           </div>
@@ -148,7 +148,7 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
                         ? "bg-slate-900 text-white shadow-sm"
                         : link.highlight
                         ? "text-[#ED1C24] bg-red-50/80 hover:bg-red-100/80 border border-red-200/60"
-                        : "text-slate-700 hover:text-[#0057B8] hover:bg-slate-100/70"
+                        : "text-slate-700 hover:text-[#0056B3] hover:bg-slate-100/70"
                     }`}
                   >
                     <Icon className={`h-3.5 w-3.5 ${isActive ? "text-white" : link.highlight ? "text-[#ED1C24]" : "text-slate-500"}`} />
@@ -171,11 +171,11 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search books, pens, thesis..."
-                className="w-full rounded-full border border-slate-200 bg-slate-50 pl-4 pr-10 py-2 text-xs text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#0057B8] focus:ring-2 focus:ring-[#0057B8]/15 transition-all"
+                className="w-full rounded-full border border-slate-200 bg-slate-50 pl-4 pr-10 py-2 text-xs text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#0056B3] focus:ring-2 focus:ring-[#0056B3]/15 transition-all"
               />
               <button
                 type="submit"
-                className="absolute right-1.5 top-1/2 -translate-y-1/2 grid h-7 w-7 place-items-center rounded-full bg-[#0057B8] text-white hover:bg-blue-700 transition-colors shadow-2xs"
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 grid h-7 w-7 place-items-center rounded-full bg-[#0056B3] text-white hover:bg-blue-800 transition-colors shadow-2xs"
                 aria-label="Search catalog"
               >
                 <Search className="h-3 w-3" />
@@ -184,12 +184,12 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
 
             {/* Right Action CTAs */}
             <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-              {/* WhatsApp Quick Order Button */}
+              {/* WhatsApp Quick Order Button in Brand Blue */}
               <a
                 href="https://wa.me/919746700123?text=Hi%20PK%20Books%2C%20I%20would%20like%20to%20place%20an%20order"
                 target="_blank"
                 rel="noreferrer"
-                className="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold shadow-xs hover:shadow-md transition-all active:scale-95"
+                className="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#0056B3] hover:bg-blue-800 text-white text-xs font-bold shadow-xs hover:shadow-md transition-all active:scale-95"
               >
                 <MessageSquare className="h-3.5 w-3.5" />
                 <span>Quick WhatsApp</span>
@@ -202,7 +202,7 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
                     onClick={() => setAccountMenuOpen(!accountMenuOpen)}
                     className="flex items-center gap-1.5 text-xs font-bold text-slate-800 bg-slate-100 hover:bg-slate-200 px-3 py-2 rounded-full border border-slate-200 transition-colors"
                   >
-                    <User className="h-3.5 w-3.5 text-[#0057B8]" />
+                    <User className="h-3.5 w-3.5 text-[#0056B3]" />
                     <span className="truncate max-w-[80px]">{currentUser.name.split(" ")[0]}</span>
                   </button>
 
@@ -216,13 +216,13 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
                         href="/login"
                         className="flex items-center gap-2 px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 font-medium"
                       >
-                        <Printer className="h-3.5 w-3.5 text-[#0057B8]" /> My Orders &amp; Print Jobs
+                        <Printer className="h-3.5 w-3.5 text-[#0056B3]" /> My Orders &amp; Print Jobs
                       </Link>
                       <Link
                         href="/admin"
                         className="flex items-center gap-2 px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 font-medium"
                       >
-                        <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" /> Admin Dashboard
+                        <ShieldCheck className="h-3.5 w-3.5 text-[#0056B3]" /> Admin Dashboard
                       </Link>
                       <button
                         onClick={() => {

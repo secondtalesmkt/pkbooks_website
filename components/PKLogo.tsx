@@ -18,7 +18,7 @@ export function PKBookIcon({
   return (
     <div className={`relative flex items-center justify-center shrink-0 ${className}`}>
       <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-        <rect width="44" height="44" rx="12" fill={isWhite ? "rgba(255,255,255,0.15)" : "#0057B8"} />
+        <rect width="44" height="44" rx="12" fill={isWhite ? "rgba(255,255,255,0.15)" : "#0056B3"} />
         <path
           d="M12 16C12 13.7909 13.7909 12 16 12H29C30.6569 12 32 13.3431 32 15V28C32 29.6569 30.6569 31 29 31H16C13.7909 31 12 29.2091 12 27V16Z"
           fill="white"
@@ -60,7 +60,7 @@ export default function PKLogo({
       <PKBookIcon className={sizeClasses.icon} colorMode={colorMode} />
       <div className="flex flex-col leading-none">
         <div className="flex items-baseline gap-1">
-          <span className={`font-black tracking-tight ${sizeClasses.text} ${isWhite ? "text-white" : "text-[#0057B8]"}`}>
+          <span className={`font-black tracking-tight ${sizeClasses.text} ${isWhite ? "text-white" : "text-[#0056B3]"}`}>
             PK
           </span>
           <span className={`font-black tracking-tight ${sizeClasses.text} ${isWhite ? "text-white/95" : "text-[#ED1C24]"}`}>

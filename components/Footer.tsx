@@ -35,7 +35,7 @@ export default function Footer() {
             <p className="text-xs text-slate-300 leading-relaxed space-y-1.5">
               <span>Phone: <a href="tel:+919746700123" className="hover:text-blue-300 underline font-semibold">9746 700 123</a></span><br />
               <span>Phone: <a href="tel:+919995037373" className="hover:text-blue-300 underline font-semibold">9995 037 373</a></span><br />
-              <span>WhatsApp: <a href="https://wa.me/919746700123" target="_blank" rel="noreferrer" className="text-emerald-400 font-semibold hover:underline">9746 700 123 (Quick Print)</a></span>
+              <span>WhatsApp: <a href="https://wa.me/919746700123" target="_blank" rel="noreferrer" className="text-blue-300 font-semibold hover:underline">9746 700 123 (Quick Print)</a></span>
             </p>
           </div>
 

@@ -12,14 +12,14 @@ export default function BestsellersFeature() {
             {/* Left Editorial Content */}
             <div className="lg:col-span-6 p-6 sm:p-9 lg:p-12 space-y-4 sm:space-y-5 z-10 text-white">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-3.5 py-1.5 text-xs font-bold text-white shadow-2xs w-fit">
-                <Flame className="h-3.5 w-3.5 text-amber-400" />
+                <Flame className="h-3.5 w-3.5 text-[#ED1C24]" />
                 <span>Trending Across Kerala · Top 10 Bestsellers</span>
               </div>
 
               <div className="space-y-2">
                 <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-white leading-[1.12] tracking-tight">
                   Kerala&apos;s Most-Read<br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-white to-cyan-200">
+                  <span className="text-blue-200">
                     Bestselling Books
                   </span>
                 </h2>
@@ -41,7 +41,7 @@ export default function BestsellersFeature() {
                 </div>
                 <div className="rounded-xl bg-white/10 backdrop-blur-md p-2.5 border border-white/15">
                   <span className="block text-[10px] uppercase font-bold text-blue-200">Rating</span>
-                  <span className="text-xs font-black text-amber-300">★ 4.9/5</span>
+                  <span className="text-xs font-black text-white">★ 4.9/5</span>
                 </div>
               </div>
 

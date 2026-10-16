@@ -10,8 +10,8 @@ export default function VisitOurStore() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0057B8] mb-1.5">
-            <Sparkles className="h-3.5 w-3.5" />
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0056B3] mb-1.5">
+            <span className="w-2 h-2 rounded-full bg-[#ED1C24]" />
             <span>Valanchery Flagship Store</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
@@ -25,10 +25,10 @@ export default function VisitOurStore() {
         {/* Store Card with Embedded Google Map */}
         <div className="rounded-3xl overflow-hidden bg-white shadow-xl border border-slate-200/80 grid grid-cols-1 lg:grid-cols-12 min-h-[420px]">
           {/* Left Column: Store Information */}
-          <div className="lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 lg:p-10 bg-slate-50/60 border-b lg:border-b-0 lg:border-r border-slate-200/80">
+          <div className="lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 lg:p-10 bg-slate-50/60 border-b lg:border-b-0 lg:border-r border-slate-200/80 text-left">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100/90 text-emerald-800 border border-emerald-200 px-3 py-1 text-xs font-bold mb-4">
-                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 text-slate-800 border border-slate-200 px-3 py-1 text-xs font-bold mb-4">
+                <span className="h-2 w-2 rounded-full bg-[#ED1C24] animate-ping" />
                 <span>Open Now · 8:30 AM – 9:00 PM</span>
               </div>
 
@@ -41,7 +41,7 @@ export default function VisitOurStore() {
 
               <div className="space-y-4 text-xs sm:text-sm text-slate-700">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-xl bg-blue-100/60 text-[#0057B8] grid place-items-center shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-xl bg-blue-50 text-[#0056B3] grid place-items-center shrink-0 mt-0.5">
                     <MapPin className="h-4 w-4" />
                   </div>
                   <div>
@@ -54,23 +54,23 @@ export default function VisitOurStore() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-xl bg-emerald-100/60 text-emerald-700 grid place-items-center shrink-0">
+                  <div className="w-8 h-8 rounded-xl bg-blue-50 text-[#0056B3] grid place-items-center shrink-0">
                     <Phone className="h-4 w-4" />
                   </div>
                   <div>
                     <span className="font-bold text-slate-900 block">Phone &amp; WhatsApp</span>
-                    <a href="tel:+919746700123" className="text-slate-600 hover:text-[#0057B8] transition-colors">
+                    <a href="tel:+919746700123" className="text-slate-600 hover:text-[#0056B3] transition-colors">
                       +91 9746 700 123
                     </a>
                     <span className="text-slate-400 mx-1.5">/</span>
-                    <a href="tel:+919995037373" className="text-slate-600 hover:text-[#0057B8] transition-colors">
+                    <a href="tel:+919995037373" className="text-slate-600 hover:text-[#0056B3] transition-colors">
                       9995 037 373
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-xl bg-amber-100/60 text-amber-800 grid place-items-center shrink-0">
+                  <div className="w-8 h-8 rounded-xl bg-red-50 text-[#ED1C24] grid place-items-center shrink-0">
                     <Clock className="h-4 w-4" />
                   </div>
                   <div>
@@ -80,7 +80,7 @@ export default function VisitOurStore() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-xl bg-purple-100/60 text-purple-700 grid place-items-center shrink-0">
+                  <div className="w-8 h-8 rounded-xl bg-red-50 text-[#ED1C24] grid place-items-center shrink-0">
                     <Mail className="h-4 w-4" />
                   </div>
                   <div>
@@ -97,7 +97,7 @@ export default function VisitOurStore() {
                 href={mapLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-[#0057B8] hover:bg-[#004799] text-white px-5 py-2.5 text-xs font-bold shadow-md shadow-blue-500/20 transition-all active:scale-98"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#0056B3] hover:bg-blue-800 text-white px-5 py-2.5 text-xs font-bold shadow-md shadow-blue-500/20 transition-all active:scale-98"
               >
                 <Navigation className="h-3.5 w-3.5" />
                 <span>Get Google Maps Directions</span>
@@ -108,7 +108,7 @@ export default function VisitOurStore() {
                 href="https://wa.me/919746700123"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 px-4 py-2.5 text-xs font-bold transition-colors"
+                className="inline-flex items-center gap-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-800 px-4 py-2.5 text-xs font-bold transition-colors"
               >
                 WhatsApp Us
               </a>
@@ -133,7 +133,7 @@ export default function VisitOurStore() {
               rel="noreferrer"
               className="absolute top-3 right-3 bg-white/95 hover:bg-white backdrop-blur-md px-3 py-1.5 rounded-xl text-xs font-bold text-slate-800 shadow-md border border-slate-200/70 flex items-center gap-1.5 transition-all hover:scale-105"
             >
-              <Navigation className="h-3.5 w-3.5 text-[#0057B8]" />
+              <Navigation className="h-3.5 w-3.5 text-[#0056B3]" />
               <span>Open in Google Maps</span>
               <ExternalLink className="h-3 w-3 text-slate-400" />
             </a>

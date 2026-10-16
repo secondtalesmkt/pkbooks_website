@@ -38,15 +38,18 @@ const reviews = [
 
 export default function CustomerReviews() {
   return (
-    <section className="py-10 sm:py-14 bg-white border-t border-gray-100">
+    <section className="py-12 sm:py-16 bg-white border-t border-slate-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <h2
-          className="text-2xl sm:text-3xl font-extrabold text-center text-[#1a1a1a] mb-8 sm:mb-10"
-          style={{ fontFamily: "var(--font-outfit), 'Outfit', serif" }}
-        >
-          Customer Reviews
-        </h2>
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0056B3] mb-1.5">
+            <span className="w-2 h-2 rounded-full bg-[#ED1C24]" />
+            <span>Valanchery Community Testimonials</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            Customer Reviews &amp; Experiences
+          </h2>
+        </div>
 
         {/* Reviews grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
@@ -55,14 +58,14 @@ export default function CustomerReviews() {
             return (
               <div
                 key={idx}
-                className="border border-gray-100 rounded-2xl p-6 sm:p-7 flex flex-col"
+                className="border border-slate-200/80 rounded-2xl p-6 sm:p-7 flex flex-col shadow-xs bg-slate-50/40 hover:bg-white transition-colors"
               >
                 {/* Stars */}
-                <div className="flex gap-0.5 mb-3">
+                <div className="flex gap-1 mb-3">
                   {[...Array(review.stars)].map((_, i) => (
                     <Star
                       key={i}
-                      className="h-4 w-4 text-[#f5a623] fill-[#f5a623]"
+                      className="h-4 w-4 text-[#ED1C24] fill-[#ED1C24]"
                     />
                   ))}
                 </div>
